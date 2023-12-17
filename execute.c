@@ -59,6 +59,10 @@ void execute(const char *filename)
         {
             sub(&stack, line_number);
         }
+        else if (strcmp(command, "div") == 0)
+        {
+            div(&stack, line_number);
+        }
         else
         {
             fprintf(stderr, "L%d: unknown instruction %s\n", line_number, command);
