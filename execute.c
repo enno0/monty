@@ -92,9 +92,13 @@ void execute(const char *filename)
         {
             pchar(&stack, line_number);
         }
-        else if (strcmp(command, "rotl") == 0 || strcmp(command, "rotates") == 0)
+        else if (strcmp(command, "rotl") == 0 || strcmp(command, "rotatesp") == 0)
         {
             rotl(&stack, line_number);
+        }
+        else if (strcmp(command, "rotr") == 0 || strcmp(command, "rotatesb") == 0)
+        {
+            rotr(&stack, line_number);
         }
         else
         {
