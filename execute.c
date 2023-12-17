@@ -13,7 +13,7 @@ void execute(const char *filename)
     FILE *file = fopen(filename, "r");
     if (!file)
     {
-        fprintf(stderr, "Error: Unable to open file %s\n", filename);
+        fprintf(stderr, "Error: Can't open file %s\n", filename);
         exit(EXIT_FAILURE);
     }
 
@@ -41,10 +41,15 @@ void execute(const char *filename)
         }
         else
         {
-            fprintf(stderr, "Line %d: Unknown command '%s'\n", line_number, command);
+            fprintf(stderr, "L%d: unknown instruction %s\n", line_number, command);
+            fclose(file);
+            free_stack(&stack);
+            exit(EXIT_FAILURE);
         }
 
         line_number++;
     }
+
     fclose(file);
+    free_stack(&stack);
 }

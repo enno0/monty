@@ -45,4 +45,5 @@ void push(stack_t **stack, int value);
 void pall(stack_t **stack);
 
 void execute(const char *filename);
+void free_stack(stack_t **stack);
 #endif /* MONTY_H */
