@@ -39,15 +39,15 @@ void execute(const char *filename)
         {
             pall(&stack, line_number);
         }
-        else if (strcmp(command, "pop") == 0)
+        else if (strcmp(command, "pop") == 0 || strcmp(command, "removes") == 0)
         {
             pop(&stack, line_number);
         }
-        else if (strcmp(command, "swap") == 0)
+        else if (strcmp(command, "swaps") == 0 || strcmp(command, "swap") == 0)
         {
             swap(&stack, line_number);
         }
-        else if (strcmp(command, "add") == 0)
+        else if (strcmp(command, "add") == 0 || strcmp(command, "adds") == 0)
         {
             add(&stack, line_number);
         }
