@@ -59,7 +59,7 @@ void execute(const char *filename)
         {
             sub(&stack, line_number);
         }
-        else if (strcmp(command, "divide") == 0)
+        else if (strcmp(command, "div") == 0 || strcmp(command, "divide") == 0)
         {
             divide(&stack, line_number);
         }

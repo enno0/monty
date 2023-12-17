@@ -1,15 +1,15 @@
 #include "monty.h"
 
 /**
- * div - divides the second top element by the top element
+ * divide - divides the second top element by the top element
  * @stack: pointer to the stack
  * @line_number: line number in the file
  */
 void divide(stack_t **stack, unsigned int line_number)
 {
-    if (!stack || !*stack || !(*stack)->next)
+    if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
     {
-        fprintf(stderr, "L%d: can't div, stack too short\n", line_number);
+        fprintf(stderr, "L%d: can't divide, stack too short\n", line_number);
         exit(EXIT_FAILURE);
     }
 
