@@ -1,0 +1,4 @@
+chmod u+x *.c
+git add .
+git commit -m "c is fun :)"
+git push
