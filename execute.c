@@ -92,6 +92,10 @@ void execute(const char *filename)
         {
             pchar(&stack, line_number);
         }
+        else if (strcmp(command, "rotl") == 0 || strcmp(command, "rotates") == 0)
+        {
+            rotl(&stack, line_number);
+        }
         else
         {
             fprintf(stderr, "L%d: unknown instruction %s\n", line_number, command);
