@@ -33,11 +33,11 @@ void execute(const char *filename)
 
         if (strcmp(command, "push") == 0)
         {
-            push(&stack, value);
+            push(&stack, value, line_number);
         }
         else if (strcmp(command, "pall") == 0)
         {
-            pall(&stack);
+            pall(&stack, line_number);
         }
         else
         {
