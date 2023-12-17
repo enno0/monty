@@ -88,6 +88,10 @@ void execute(const char *filename)
         {
             pchar(&stack, line_number);
         }
+        else if (strcmp(command, "pstr") == 0 || strcmp(command, "prstr") == 0)
+        {
+            pchar(&stack, line_number);
+        }
         else
         {
             fprintf(stderr, "L%d: unknown instruction %s\n", line_number, command);
