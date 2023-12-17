@@ -39,6 +39,10 @@ void execute(const char *filename)
         {
             pall(&stack, line_number);
         }
+        else if (strcmp(command, "pop") == 0)
+        {
+            pop(&stack, line_number);
+        }
         else
         {
             fprintf(stderr, "L%d: unknown instruction %s\n", line_number, command);
