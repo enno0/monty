@@ -47,6 +47,14 @@ void execute(const char *filename)
         {
             swap(&stack, line_number);
         }
+        else if (strcmp(command, "add") == 0)
+        {
+            add(&stack, line_number);
+        }
+        else if (strcmp(command, "nop") == 0)
+        {
+            nop(&stack, line_number);
+        }
         else
         {
             fprintf(stderr, "L%d: unknown instruction %s\n", line_number, command);
