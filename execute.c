@@ -43,6 +43,10 @@ void execute(const char *filename)
         {
             pop(&stack, line_number);
         }
+        else if (strcmp(command, "swap") == 0)
+        {
+            swap(&stack, line_number);
+        }
         else
         {
             fprintf(stderr, "L%d: unknown instruction %s\n", line_number, command);
