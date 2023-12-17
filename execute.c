@@ -22,9 +22,22 @@ void execute(const char *filename)
         int value;
         char command[10];
         int len;
+        char *trimmed_line = line;
+        char *end = trimmed_line + strlen(trimmed_line) - 1;
 
         sscanf(line, "%s %d", command, &value);
         len = strlen(command);
+        while (isspace(*trimmed_line))
+            ++trimmed_line;
+
+        while (end > trimmed_line && isspace(*end))
+            *end-- = '\0';
+
+        if (trimmed_line[0] == '#' || trimmed_line[0] == '\0')
+        {
+            line_number++;
+            continue;
+        }
 
         if (len > 0 && command[len - 1] == '$')
         {
