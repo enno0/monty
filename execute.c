@@ -80,6 +80,10 @@ void execute(const char *filename)
         {
             divide(&stack, line_number);
         }
+        else if (strcmp(command, "mod") == 0 || strcmp(command, "compute") == 0)
+        {
+            mod(&stack, line_number);
+        }
         else
         {
             fprintf(stderr, "L%d: unknown instruction %s\n", line_number, command);
