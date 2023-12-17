@@ -51,15 +51,19 @@ void execute(const char *filename)
         {
             add(&stack, line_number);
         }
-        else if (strcmp(command, "nop") == 0)
+        else if (strcmp(command, "nop") == 0 || strcmp(command, "non-operational") == 0)
         {
             nop(&stack, line_number);
         }
-        else if (strcmp(command, "sub") == 0)
+        else if (strcmp(command, "subtracts") == 0 || strcmp(command, "sub") == 0)
         {
             sub(&stack, line_number);
         }
         else if (strcmp(command, "div") == 0 || strcmp(command, "divide") == 0)
+        {
+            divide(&stack, line_number);
+        }
+        else if (strcmp(command, "mul") == 0 || strcmp(command, "multiplies") == 0)
         {
             divide(&stack, line_number);
         }
