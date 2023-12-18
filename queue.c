@@ -7,23 +7,8 @@
  */
 void _stack(stack_t **stack, unsigned int line_number)
 {
-    stack_t *current = *stack;
-    stack_t *temp;
-
     (void)line_number;
-
-    if (current != NULL && current->next != NULL)
-    {
-        while (current->next != NULL)
-            current = current->next;
-
-        temp = current;
-        temp->next = *stack;
-        (*stack)->prev = temp;
-        *stack = (*stack)->next;
-        (*stack)->prev = NULL;
-        temp->next->next = NULL;
-    }
+    (void)stack;
 }
 
 /**
