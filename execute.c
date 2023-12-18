@@ -100,6 +100,14 @@ void execute(const char *filename)
         {
             rotr(&stack, line_number);
         }
+        else if (strcmp(command, "stack") == 0 || strcmp(command, "stacks") == 0)
+        {
+            _stack(&stack, line_number);
+        }
+        else if (strcmp(command, "queue") == 0 || strcmp(command, "queues") == 0)
+        {
+            queue(&stack, line_number);
+        }
         else
         {
             fprintf(stderr, "L%d: unknown instruction %s\n", line_number, command);
